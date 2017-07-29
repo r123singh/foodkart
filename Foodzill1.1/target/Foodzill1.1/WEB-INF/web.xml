@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+    version="3.0">
+
+    <display-name>Food zill webapp</display-name>
+  
+   <welcome-file-list>
+		<welcome-file>LoginPage.jsp</welcome-file>
+	</welcome-file-list>
+	
+    <listener>
+  	<listener-class>
+		com.foodvilla.listeners.CustomServletListener
+  		</listener-class>
+  </listener>
+  
+  <servlet>
+    <description></description>
+    <display-name>RegisterUserServlet</display-name>
+    <servlet-name>RegisterUserServlet</servlet-name>
+    <servlet-class>com.foodvilla.register.RegisterUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterUserServlet</servlet-name>
+    <url-pattern>/RegisterUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UserLoginServlet</display-name>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <servlet-class>com.foodvilla.login.UserLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <url-pattern>/UserLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MenuServlet</display-name>
+    <servlet-name>MenuServlet</servlet-name>
+    <servlet-class>com.foodvilla.menu.MenuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MenuServlet</servlet-name>
+    <url-pattern>/MenuServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>OrderServlet</display-name>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>com.foodvilla.orders.OrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/OrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CreateJsonOrderServlet</display-name>
+    <servlet-name>CreateJsonOrderServlet</servlet-name>
+    <servlet-class>com.foodvilla.orders.CreateJsonOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateJsonOrderServlet</servlet-name>
+    <url-pattern>/CreateJsonOrderServlet</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>SyncfoodOrdersServlet</display-name>
+    <servlet-name>SyncfoodOrdersServlet</servlet-name>
+    <servlet-class>com.foodvilla.orders.SyncfoodOrdersServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SyncfoodOrdersServlet</servlet-name>
+    <url-pattern>/SyncfoodOrdersServlet</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
